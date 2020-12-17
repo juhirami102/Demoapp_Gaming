@@ -1,0 +1,80 @@
+@each $color, $value in $theme-colors {
+    .text-#{$color} {
+        @if ($color == "white") {
+            color: var(--theme-color) !important;
+        } 
+        color: var(--#{$color}) !important;
+    }
+    .badge-#{$color} {        
+        background-color: var(--#{$color});
+        color: $white !important;
+    }
+    .bg-#{$color} {
+        @if ($color == "white") {
+            background-color: var(--theme-color) !important;
+        }
+        background-color: var(--#{$color}) !important;
+    }
+    .border-#{$color} {        
+        border-color: $value !important;
+    }
+    .bg-light-#{$color}{
+        background-color: lighten( $value, 30% ) !important;
+    }
+}
+
+@each $color, $value in $other-colors {
+    .bg-#{$color} {        
+        background-color: $value !important;
+	}
+	.text-#{$color} {        
+        color: $value !important;
+    }
+    .border-#{$color} {        
+        border-color: $value !important;
+    }
+}
+
+@each $color, $value in $sequance-colors {
+    .sequance-color{
+        &:nth-child(6n + #{$color}){
+            .sequance-bg-color{
+                background-color: $value !important;
+            }
+        }
+    }
+}
+  
+
+@include placeholder{
+    color: $gray-500;
+    font-size: 12px;
+}
+.badge {
+    font-size: 11px;
+    border-radius: 5px;
+}
+.progress {
+    height: 4px;
+    margin-bottom: .25rem;
+    @include border-radius(0);
+}
+
+.tooltip {
+    font-family: inherit;
+    &.bs-tooltip-top .arrow::before{
+        border-top-color: var(--custom);
+    }
+    &.bs-tooltip-bottom .arrow::before{
+        border-bottom-color: var(--custom);
+    }
+    &.bs-tooltip-left .arrow::before{
+        border-left-color: var(--custom);
+    }
+    &.bs-tooltip-right .arrow::before{
+        border-right-color: var(--custom);
+    }
+    .tooltip-inner {
+        background-color: var(--custom);
+    }
+}

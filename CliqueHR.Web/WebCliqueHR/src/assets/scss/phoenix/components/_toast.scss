@@ -1,0 +1,11 @@
+.toast{
+    @include border-radius(0);
+    background-color: $white;
+    border: 0;
+    .toast-header {
+        background-color: $white;
+        border-bottom: 0;
+        padding: .50rem;
+        color: $theme-color;
+    }
+}

@@ -1,0 +1,38 @@
+.modal-from.top {
+    .modal-dialog {
+        /* height: 100vh; */
+        position: fixed;
+        right: 0;
+        width: 100%;
+        top: 0;
+        border-radius: 0;
+        margin: 0;
+    }
+    // &.show{
+    //     .modal-dialog {
+    //         top: 0;
+    //         max-height: 100vh;
+    //     }
+    // }
+    .modal-content {
+        min-height: 100vh;
+        border-radius: 0;
+        border: 0;
+        background: var(--white);
+    }
+    .modal-dialog-scrollable {
+        .modal-body {
+            overflow-x: hidden;
+        }
+    }
+}
+
+
+.swal-modal{
+    position: absolute;
+    left: 20px;
+    top: 0;
+    .swal-text{
+        margin: 20px;
+    }
+}

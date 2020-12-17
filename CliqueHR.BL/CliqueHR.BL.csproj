@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8F1BD13A-194A-4FC7-8D88-9D54E52E0F52}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CliqueHR.BL</RootNamespace>
+    <AssemblyName>CliqueHR.BL</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdminPanelService\CompanyService\EntityService.cs" />
+    <Compile Include="AdminPanelService\CompanyService\GroupCompanyService.cs" />
+    <Compile Include="AdminPanelService\CompanyService\PageSettingsService.cs" />
+    <Compile Include="AdminPanelService\CompanyService\SecuritySettingsService.cs" />
+    <Compile Include="Implementation\AdminPanel\CompanyService\IEntityService.cs" />
+    <Compile Include="Implementation\AdminPanel\CompanyService\IGroupCompanyService.cs" />
+    <Compile Include="Implementation\AdminPanel\CompanyService\IPageSettingService.cs" />
+    <Compile Include="Implementation\AdminPanel\CompanyService\ISecuritySettingService.cs" />
+    <Compile Include="AdminPanelService\EmployeeService\GlobalProfileService.cs" />
+    <Compile Include="AdminPanelService\EmployeeService\UserDefinedFieldService.cs" />
+    <Compile Include="Implementation\AdminPanel\EmployeeService\IGlobalProfileService.cs" />
+    <Compile Include="Implementation\AdminPanel\EmployeeService\IUserDefinedFieldService.cs" />
+    <Compile Include="Implementation\ITestService.cs" />
+    <Compile Include="Implementation\AdminPanel\MastersService\IQualificationService.cs" />
+    <Compile Include="AdminPanelService\MastersService\QualificationService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CliqueHR.Common\CliqueHR.Common.csproj">
+      <Project>{6724215F-12BE-4F9E-BBAA-5E5DD183AA2D}</Project>
+      <Name>CliqueHR.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CliqueHR.DL\CliqueHR.DL.csproj">
+      <Project>{6fa4186a-6ce0-4d43-9de4-a575c252104b}</Project>
+      <Name>CliqueHR.DL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CliqueHR.Helpers\CliqueHR.Helpers.csproj">
+      <Project>{d44f6b65-b985-4288-bbf6-60eb5143862b}</Project>
+      <Name>CliqueHR.Helpers</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

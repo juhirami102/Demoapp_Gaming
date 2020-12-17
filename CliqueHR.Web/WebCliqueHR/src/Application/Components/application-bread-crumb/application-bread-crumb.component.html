@@ -1,0 +1,10 @@
+<div class="card-header bg-white mb-2 breadcrumb-outer">
+    <ul class="nav nav-tabs">
+        <li *ngFor="let prev of data.PreviousNavigation" class="nav-item">
+            <a class="nav-link text-custom" [routerLink]="prev.RouteLink">{{prev.Name}}</a>
+        </li>
+        <li class="nav-item">
+            <span class="nav-link">{{data.CurrentNavigation}}</span>
+        </li>
+    </ul>
+</div>

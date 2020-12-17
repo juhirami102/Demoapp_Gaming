@@ -1,0 +1,77 @@
+.login-btn{
+    position: fixed;
+    right: 0;
+    top: 75px;
+    transition: all .6s ease-in-out;
+    .nav-link{
+        background: var(--white);
+        @include border-radius(10px);
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        margin-bottom: 1rem;
+        padding: 10px 20px;
+        color: $theme-title;
+        &.active{
+            background: var(--white);
+        }
+    }
+    &.btn-active{
+        right: 400px;
+    }
+}
+.login-page{
+    .hidden-login{
+        position: fixed;
+        width: 400px;
+        background: #fff;
+        top: 0;
+        right: -400px;
+        padding: 20px;
+        height: 100vh;
+        transition: all .6s ease-in-out;
+        z-index: 20;
+        &.show{
+            right: 0;
+        }
+        .form-group{
+            i.icon{
+                position: absolute;
+                right: 0;
+                top: 26px;
+                color: #a5a5a5;
+            }
+        }
+    }
+    .copyright{
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        background: rgba(255, 255, 255, 0.5);
+        padding: 3px 10px;
+        border-radius: 5px;
+    }
+}
+
+.carousel-caption {
+    right: 10%;
+    bottom: 50%;
+    left: 10%;
+    color: $theme-title;
+    text-align: left;
+    transform: translateY(50%);
+}
+.carousel-indicators{
+    li {
+        border: 0;
+        width: 30px;
+        height: 5px;
+        border-radius: 10px;
+        transition: all .6s ease;
+    }
+    .active {
+        opacity: 1;
+        width: 50px;
+        background-color: var(--primary);
+    }
+}
+

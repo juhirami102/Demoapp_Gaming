@@ -1,0 +1,160 @@
+<nav class="navbar navbar-expand-sm bg-transparent">
+    <a class="navbar-brand mr-0 d-inline-block d-sm-none" href="dashboard.html">
+        <object id="phoenixHCM" data="assets/images/logo.svg" type="image/svg+xml" style="height: 55px;"></object>
+    </a>
+    <div class="navbar-toggler menu-open-button collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" 
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="hamburger hamburger-1"></span>
+        <span class="hamburger hamburger-2"></span>
+        <span class="hamburger hamburger-3"></span>
+    </div>
+    <div class="navbar-collapse collapse" id="navbarSupportedContent">
+        <div class="d-flex w-100 align-items-center justify-content-between">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item hover-nav-item dropcenter position-relative">
+                    <a class="nav-link" type="button" id="appMenu" data-toggle="dropdown" 
+                    aria-haspopup="true" aria-expanded="false">
+                        <i class="icon icon-apps mr-2"></i>Apps
+                    </a>
+                    <ul class="menu-dropdown dropdown-menu animate__animated animate__slideInDown" 
+                        aria-labelledby="appMenu" style="width: 250px;">
+                        <ng-container #myappcontainer>
+
+                        </ng-container>
+                    </ul>
+                </li>
+                <li class="nav-item header-search d-none d-lg-inline-block">
+                    <a class="nav-link d-inline-block pr-0" href="#">
+                        <i class="icon icon-search mr-2"></i>
+                    </a>
+                    <input type="search" class="d-inline-block" placeholder="Search...">
+                </li>
+            </ul>
+            <a class="navbar-brand mr-0 d-none d-sm-inline-block" href="dashboard.html">
+                <object id="phoenixHCM" data="assets/images/logo.svg" type="image/svg+xml" style="height: 55px;"></object>
+            </a>
+            <ul class="navbar-nav ml-auto align-items-center">
+                <li class="nav-item d-none d-lg-inline-block">
+                    <a class="nav-link">
+                        <img src="assets/images/language.png" style="height: 26px;"/>
+                    </a>
+                </li>
+                <li class="nav-item d-none d-lg-inline-block cursor-pointer">
+                    <a class="nav-link full-screen" #fullScreen>
+                        <i class="icon icon-full-view mr-2"></i>
+                    </a>
+                </li>
+                <li class="nav-item dropleft notification-section">
+                    <a class="nav-link" type="button" id="notification" data-toggle="dropdown" 
+                        aria-haspopup="true" aria-expanded="false">
+                        <div class="position-relative">
+                            <i class="icon icon-notification mr-2 bx-tada"></i>
+                            <i class="msg-unread"></i>
+                        </div>
+                    </a>
+                    <ul class="dropdown-menu p-3 animate__animated animate__slideInDown" aria-labelledby="notification"
+                        style="width: 300px;">
+                        <li class="unread">
+                            <div class="media align-items-center">
+                                <img src="assets/images/users/user1.jpg" class="rounded-circle mr-3" />
+                                <div class="media-body">
+                                    <h5 class="mb-0">Mayra Sibley just sent you a <b>"Best Wishes"</b></h5>
+                                </div>
+                                <div class="notification-time h6 mb-0">15min ago</div>
+                                <a class="stretched-link" href="#"></a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="media align-items-center">
+                                <img src="images/users/user1.jpg" class="rounded-circle mr-3" />
+                                <div class="media-body">
+                                    <h5 class="mb-0">Mayra Sibley just sent you a <b>"Best Wishes"</b></h5>
+                                </div>
+                                <div class="notification-time h6 mb-0">2day(s) ago</div>
+                                <a class="stretched-link" href="#2"></a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="media align-items-center">
+                                <img src="images/users/user1.jpg" class="rounded-circle mr-3" />
+                                <div class="media-body">
+                                    <h5 class="mb-0">Mayra Sibley just sent you a <b>"Best Wishes"</b></h5>
+                                </div>
+                                <div class="notification-time h6 mb-0">24 Aug 2020</div>
+                                <a class="stretched-link" href="#3"></a>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item dropleft position-relative">
+                    <a class="nav-link" type="button" id="dropdownMenuButton" data-toggle="dropdown" 
+                        aria-haspopup="true" aria-expanded="false">
+                        <i class="icon icon-setting mr-2"></i>
+                    </a>
+                    <ul class="stories-menu dropdown-menu animate__animated animate__slideInDown" aria-labelledby="dropdownMenuButton"
+                        style="width: 200px;">
+                        <li>
+                            <a  (click)="OnChangeTheme()">
+                                <i class="icon icon-theme"></i>
+                                <span class='action-name'>Theme</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link cursor-pointer">
+                        <i class="icon icon-power"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- MyApp Templates -->
+<ng-template let-app [AppCode]="'home'">
+    <li class="active">
+        <a [routerLink]="app.RouteLink">
+            <i class="icon icon-home"></i>
+            <span class='action-name'>{{app.Name}}</span>
+        </a>
+    </li>
+</ng-template>
+<ng-template let-app [AppCode]="'admin-panel'">
+    <li>
+        <a [routerLink]="app.RouteLink">
+            <i class="icon icon-manager"></i>
+            <span class='action-name'>{{app.Name}}</span>
+        </a>
+    </li>
+</ng-template>
+<ng-template let-app [AppCode]="'reminders'">
+    <li class=""> 
+        <a [routerLink]="app.RouteLink">
+            <i class="icon icon-calendar"></i>
+            <i class="badge badge-danger msg-unread"></i>
+            <span>{{app.Name}}</span> 
+        </a> 
+    </li>
+</ng-template>
+<ng-template let-app [AppCode]="'approvals'">
+    <li> 
+        <a [routerLink]="app.RouteLink"> 
+            <i class="icon icon-notification"></i> 
+            <i class="badge badge-success msg-unread"></i>
+            <span>{{app.Name}}</span> 
+        </a> 
+    </li>
+</ng-template>
+<ng-template let-app [AppCode]="'hr-policy'">
+    <li><a [routerLink]="app.RouteLink"><i class="icon icon-hr"></i><span>{{app.Name}}</span></a></li>
+</ng-template>
+<ng-template let-app [AppCode]="'employee-directory'">
+    <li><a [routerLink]="app.RouteLink"><i class="icon icon-employee-search"></i><span>{{app.Name}}</span></a></li>
+</ng-template>
+<ng-template let-app [AppCode]="'attendance'">
+    <li> <a [routerLink]="app.RouteLink"> <i class="icon icon-attendance"></i> <span>{{app.Name}}</span> </a> </li>
+</ng-template>
+<ng-template let-app [AppCode]="'leave'">
+    <li> <a [routerLink]="app.RouteLink"> <i class="icon icon-leave"></i> <span>{{app.Name}}</span> </a> </li>
+</ng-template>

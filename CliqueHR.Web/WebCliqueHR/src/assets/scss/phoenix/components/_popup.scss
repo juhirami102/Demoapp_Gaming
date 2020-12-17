@@ -1,0 +1,17 @@
+.alert-header{
+    width: 70px;
+    height: 70px;
+    background: var(--primary);
+    color: #fff;
+    font-size: 36px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 60px;
+    margin: 0 auto;
+    border-radius: 50%;
+    margin-top: -35px;
+    i.icon{
+        color: var(--white);
+    }
+}    
+    

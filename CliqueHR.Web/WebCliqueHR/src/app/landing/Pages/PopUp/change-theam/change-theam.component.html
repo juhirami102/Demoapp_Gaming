@@ -1,0 +1,94 @@
+<div class="modal fade modal-from top animate__animated animate__slideInDown" id="changeTheme" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable" role="document">
+        <div class="modal-content border-0">
+            <div class="modal-header">
+                <h4 class="modal-title" id="exampleModalCenterTitle">Theme Customizer</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <i class="icon icon-wrong"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-12">
+                        <label class="h6 mb-0">
+                            Select Background
+                        </label>
+                        <ul class="image-list">
+                            <li class="image-item selected-image">
+                                <img src="assets/images/bg-image-1.jpg" class="img-fluid"/>
+                            </li>
+                            <li class="image-item">
+                                <img src="assets/images/background/one.jpeg" class="img-fluid"/>
+                            </li>
+                            <li class="image-item">
+                                <img src="assets/images/bg-image-2.jpg" class="img-fluid"/>
+                            </li>
+                            <li class="image-item">
+                                <img src="assets/images/background/two.jpeg" class="img-fluid"/>
+                            </li>
+                            <li class="image-item">
+                                <img src="assets/images/background/three.jpg" class="img-fluid"/>
+                            </li>
+                            <li class="image-item">
+                                <img src="assets/images/background/four.png" class="img-fluid"/>
+                            </li>
+                            <li class="image-item">
+                                <img src="assets/images/background/five.jpeg" class="img-fluid"/>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-12">
+                        <label class="h6 mb-0">
+                            Theme Layout
+                        </label>
+                        <div class="theme-mode mt-2">
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" id="lightTheme" name="customRadioInline1" class="custom-control-input" value="light" checked>
+                                <label class="custom-control-label h5 pl-2" for="lightTheme">Light</label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" id="darkTheme" name="customRadioInline1" value="dark" class="custom-control-input">
+                                <label class="custom-control-label h5 pl-2" for="darkTheme">Dark</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-12">
+                        <label class="h6 mb-0">
+                            Icon Colors
+                        </label>
+                        <div class="mt-1">
+                            <ul class="color-picker">
+                                <li [class.selected-color]="selectedColor[i] == true" (click)="OnColorSelect(color, i)" *ngFor="let color of colorList; let i ='index'" class="color-item" [ngStyle]="{'background-color':GetColorStyle(color)}"></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <label class="h6 mb-0">
+                            Border Radius
+                        </label>
+                        <div class="rounded-mode mt-2">
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" id="roundedCard" name="roundedMode" class="custom-control-input" value="rounded">
+                                <label class="custom-control-label h5 pl-2" for="roundedCard">Rounded</label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" id="flatCard" name="roundedMode" value="flat" class="custom-control-input" checked>
+                                <label class="custom-control-label h5 pl-2" for="flatCard">Flat</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-custom px-4 py-2" data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-custom px-4 py-2">Apply</button>
+            </div>
+        </div>
+    </div>
+</div>

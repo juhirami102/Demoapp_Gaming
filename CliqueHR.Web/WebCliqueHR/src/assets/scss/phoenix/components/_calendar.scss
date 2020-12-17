@@ -1,0 +1,108 @@
+/* Start : Pignose Calendar css*/
+.pignose-calendar {
+    width: 100%;
+    max-width: unset;
+    border: none;
+    box-shadow: none;
+    background: transparent;
+    .pignose-calendar-top-date{    
+        text-transform: capitalize;
+        padding: 5px 0px;
+    }
+    .pignose-calendar-top-month{
+        margin-bottom: 0px;
+        padding:5px 0px;
+        font-weight: 500;
+        display: inline-block;
+        color:  #222222; 
+    }
+    .pignose-calendar-top-year{
+        display: inline-block;
+        color:  #222222;   
+    }
+    .pignose-calendar-top-nav{
+        padding: 5px;
+        .pignose-calendar-top-icon{
+            font-size: 100% ;
+        }
+    }
+    .pignose-calendar-header{
+        font-size: 12px;
+        margin-top: 0;
+        font-weight: 600;
+        overflow: hidden;
+        padding: 0 ;
+        .pignose-calendar-week,
+        .pignose-calendar-week-sun,
+        .pignose-calendar-week-sat{
+            color: #7e7e7e;
+        }
+    }
+    .pignose-calendar-top {
+        padding: 10px 0px;
+        background-color: transparent;
+        border-bottom: none;
+        box-shadow: none;
+        -webkit-box-shadow: none;
+    }
+    .pignose-calendar-body {
+        padding: 5px 10px 0px;  
+        width: 100%;
+        white-space: nowrap;
+        overflow-y: hidden;
+        overflow-x: scroll;
+        -webkit-overflow-scrolling: touch;      
+    }
+    .pignose-calendar-unit{
+        a{
+            color:  #222222;
+        }
+        &.pignose-calendar-unit-active{
+            a{
+                background-color: var(--primary);
+                color: #fff;
+            }
+            &.pignose-calendar-unit-sun,
+            &.pignose-calendar-unit-sat{
+                a{
+                    color: #ffffff;
+                }
+            }
+        }
+        &.pignose-calendar-unit-range a {
+            background-color: var(--primary);
+            color: #fff;
+            border-radius: 50%;
+            width: 2.4em;
+        }
+    }
+    .pignose-calendar-row {
+        display: inline-block;
+        width: 100%;
+    }
+}
+/* End */
+
+.toggle-calendar .pignose-calendar-body {
+    display: none;
+}
+.full-calendar .pignose-calendar-row {
+    display: block;
+}
+.apply-leave-page .pignose-calendar .pignose-calendar-top,
+.apply-leave-page .pignose-calendar {
+    background-color: transparent ;
+}
+.apply-leave-page .calendar{
+    margin: 0 -15px
+}
+
+.fc-scrollgrid-sync-inner{
+    padding: 0.5rem;
+}
+.day-status{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-left: 10px !important;
+}

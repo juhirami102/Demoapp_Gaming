@@ -1,0 +1,41 @@
+<div (appOutsideClick)="multiDdOpen = false;" class="cuppa-dropdown">
+    <button class="selected-list form-control" (click)="toggleDdl($event)">
+        <div class="c-btn">
+            <span class="display-text">{{displayText}}</span>
+            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-down ml-auto" fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd"
+                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z">
+                </path>
+            </svg>
+        </div>
+    </button>
+    <div (click)="$event.stopPropagation();" [ngStyle]="{'display': multiDdOpen ? 'block' : 'none'}"
+        class="dropdown-list">
+        <div class="list-area">
+            <div class="list-filter">
+                <span class="c-search">
+                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-search" fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z">
+                        </path>
+                        <path fill-rule="evenodd"
+                            d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z">
+                        </path>
+                    </svg>
+                </span>
+                <input class="c-input form-control ng-pristine ng-valid ng-touched" style="box-shadow: none;" type="text" [formControl]="formControl" placeholder="Search" />
+            </div>
+            <div style="overflow: auto; max-height: 300px;">
+                <ul class="lazyContainer">
+                    <ng-container *ngTemplateOutlet="dropdownContaint;">
+                    </ng-container>
+                    <!-- <li class="pure-checkbox">
+                        <input aria-labelledby="option" type="checkbox"><label>Brazil</label>
+                    </li> -->
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

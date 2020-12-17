@@ -1,0 +1,50 @@
+.timeline-outer{
+    margin: 1rem 0 0 1.8rem;
+}
+.timeline-item{
+    position: relative;
+    //border-left: 1px solid #dddddd;
+    padding: 0 0 30px 40px;
+    .date-block{
+        width: 50px;
+        height: 50px;
+        background: #fff;
+        border-radius: 50%;
+        text-align: center;
+        padding: 8px 0 0;
+        position: absolute;
+        top: 0;
+        left: -25px;
+        &.download-block {
+            top: 60px;
+            line-height: 45px;
+            padding: 0;
+            background: var(--primary);
+        }
+    }
+    &:last-child{
+        padding-bottom: 0;
+    }
+}
+.img-thumbnail-block{
+    span{
+        margin: 0 10px 10px 0;
+        display: inline-block;
+        vertical-align: middle;
+        &:first-child{
+            margin-left: 0;
+        }
+    }
+    .color-block {
+        background-color: var(--primary);
+        height: 40px;
+        width: 40px;
+        line-height: 40px;
+        text-align: center;
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 26px;
+        border-radius: 0.25rem;
+        color: #ffffff;
+    }
+}

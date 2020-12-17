@@ -1,0 +1,38 @@
+// Core variables and mixins
+@import "phoenix/mixins";
+@import "phoenix/variables";
+@import "root";
+@import "phoenix/type";
+
+.body{
+	@import "phoenix/login";
+	@import "phoenix/components/header";
+	@import "phoenix/components/menu";
+    @import "phoenix/components/footer";
+	@import "phoenix/components/button";
+	@import "phoenix/components/popup";
+	@import "phoenix/components/cards";
+	@import "phoenix/components/toast";
+	@import "phoenix/components/text";
+	@import "phoenix/components/carousel";
+	@import "phoenix/components/timeline";
+	@import "phoenix/components/calendar";
+	@import "phoenix/components/table";
+	@import "phoenix/components/input";
+	@import "phoenix/components/modal";
+	// @import "phoenix/components/navs";
+	// @import "phoenix/components/data-grid";
+	// @import "phoenix/components/accordion";
+	// @import "phoenix/components/select-dropdown";
+	// @import "phoenix/components/datetimepicker";
+	// @import "phoenix/components/breadcrumb";
+	// @import "phoenix/components/timeline";
+	@import "phoenix/components/chat";
+	@import "phoenix/components/loader";
+	@import "phoenix/components/nav";
+	@import "phoenix/components/tree";
+	@import "phoenix/components/common-theme";
+	@import "phoenix/components/animation";
+	@import "phoenix/components/admin";
+	@import "phoenix/components/mobile";
+}

@@ -1,0 +1,122 @@
+*{
+	@include box-sizing(border-box);
+}
+a,
+a:link,
+a:visited,
+a:hover,
+a:focus,
+a:active{
+	outline: none;
+	text-decoration: none;
+}
+*:before,
+*:after {
+	@include box-sizing(border-box);
+}
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+	font-family: $font-family-base;	
+	line-height: $headings-line-height;
+	padding: 0;
+	letter-spacing: 0.75px;
+	small, .small {		
+		line-height: 1;		
+	}
+}
+h1, .h1,
+h2, .h2,
+h3, .h3 {
+	small, .small {
+		font-size: 65%;
+	}
+}
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+	small, .small {
+		font-size: 75%;
+	}
+}
+h1, .h1 { font-size: $font-size-h1; }
+h2, .h2 { font-size: $font-size-h2; }
+h3, .h3 { font-size: $font-size-h3; }
+h4, .h4 { font-size: $font-size-h4; }
+h5, .h5 { font-size: $font-size-h5; }
+h6, .h6 { font-size: $font-size-h6; }
+small, .small {
+	font-size: floor((100% * $font-size-small / $font-size-base));
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+.page-title{
+	font-size: $page-title;	
+	vertical-align: middle;	
+}
+.heading{
+	font-size: $heading;
+	font-family: $font-family-title;
+	font-weight: 700;
+	line-height: 22px;
+}
+.sub-heading{
+	font-size: $sub-heading;
+}
+.text-caption{
+	font-size: $text-caption;
+	color: $theme-icon;	
+}
+.text-small{
+	font-size: $text-small;
+}
+.form-fields{ 
+	label{
+		color: #5f5f5f;
+	}
+}
+// Contextual backgrounds
+i.icon{
+	display: inline-flex;
+	vertical-align: middle;
+	color: var(--theme-icon-color);
+}
+// ::-webkit-scrollbar {
+// 	display: none;
+// }
+
+// Custom Scrollbar
+::-webkit-scrollbar {
+	width: 5px;
+	height: 3px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    -webkit-border-radius: 0;
+    border-radius: 0;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    background: $theme-color; 
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+	box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+}
+::-webkit-scrollbar-thumb:window-inactive {
+	background: $theme-color; 
+}
+.sprite-svg use{
+	fill: var(--primary);
+}
+textarea{
+	resize: none
+}
+object {
+	pointer-events: none;
+	vertical-align: middle;
+}

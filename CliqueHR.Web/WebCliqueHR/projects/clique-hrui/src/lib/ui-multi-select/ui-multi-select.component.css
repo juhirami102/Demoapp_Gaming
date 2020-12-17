@@ -1,0 +1,70 @@
+.cuppa-dropdown{
+    position: relative;
+}
+.c-btn{
+    line-height: 1.25;
+    font-size: .85rem;
+    padding: 0px !important;
+    align-items: center;
+    height: 100%;
+    background: #fff;
+}
+.selected-list .c-btn {
+    width: 100%;
+    padding: 5px 10px;
+    cursor: pointer;
+    display: flex;
+    position: relative;
+}
+.dropdown-list {
+    position: absolute;
+    width: 100%;
+    z-index: 99999;
+}
+.list-area {
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background: #fff;
+    margin: 0;
+    box-shadow: 0 1px 5px #959595;
+}
+.list-filter {
+    border-bottom: 1px solid #ccc;
+    position: relative;
+    padding-left: 35px;
+    height: 35px;
+}
+.list-filter .c-search {
+    position: absolute;
+    top: 9px;
+    left: 10px;
+    width: 15px;
+    height: 15px;
+}
+.list-filter input {
+    border: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+}
+.dropdown-list ul {
+    padding: 0;
+    list-style: none;
+    overflow: auto;
+    margin: 0;
+}
+.dropdown-list ul li:first-child {
+    padding-top: 10px;
+}
+.dropdown-list ul li {
+    cursor: pointer;
+    text-align: left;
+}
+.pure-checkbox input[type=checkbox] {
+    margin: 0 10px;
+}
+.display-text {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}

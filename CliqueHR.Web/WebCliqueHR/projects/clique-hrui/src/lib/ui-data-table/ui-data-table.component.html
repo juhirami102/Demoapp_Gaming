@@ -1,0 +1,63 @@
+<div class="form-row">
+    <div class="col-12 table-responsive mb-3">
+        <table class="table table-striped mb-0">
+            <thead>
+                <tr>
+                    <ng-container #columncnt>
+                    </ng-container>
+                </tr>
+            </thead>
+            <tbody>
+                <ng-container #rowcnt>
+                </ng-container>
+            </tbody>
+        </table>
+        <div class="no-row" *ngIf="isNoRowsFound">
+            <span>
+                No rows found.
+            </span>
+        </div>
+    </div>
+    <nav *ngIf="isNoRowsFound == false" class="col-12" aria-label="Page navigation example">
+        <div class="d-flex justify-content-between align-items-center">
+            <span class="h5 mb-0">Showing {{currestStartPage}} to {{currestEndPage}} of {{totalRows}} entries</span>
+            <ul class="pagination mb-0">
+                <li class="page-item cursor-pointer" (click)="previousPage()">
+                    <a class="page-link" aria-label="Previous">
+                        <span aria-hidden="true">Previous</span>
+                    </a>
+                </li>
+                <li (click)="OnPageSelect(page)" *ngFor="let page of navPagesSets[activePageSet]" [class.active]="page.page == activePage" class="page-item cursor-pointer">
+                    <a class="page-link">{{page.page}}</a>
+                </li>
+                <li class="page-item cursor-pointer" (click)="nextPage()">
+                    <a class="page-link" aria-label="Next">
+                        <span aria-hidden="true">Next</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>
+
+<ng-template let-col #column>
+    <th class="{{CloumnClass(col)}}">
+        <div (click)="sortingClass[col.fieldId] != '' ? sortData(col): ''" class="column-text"
+            [ngClass]="sortingClass[col.fieldId]">{{col.fieldName}}</div>
+    </th>
+</ng-template>
+
+
+<ng-template let-col #loadingrow>
+    <tr class="loading-tr" *ngFor="let i of [1,2,3]">
+        <ng-template ngFor let-col [ngForOf]="restoGridConfig.Columns">
+            <th class="loading-th">
+                <div class="loading">
+
+                </div>
+            </th>
+        </ng-template>
+    </tr>
+</ng-template>
+
+

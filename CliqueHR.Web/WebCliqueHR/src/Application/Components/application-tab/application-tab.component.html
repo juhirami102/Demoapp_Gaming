@@ -1,0 +1,23 @@
+<div class="tab-pane fade show active" id="v-company" role="tabpanel">
+    <div class="card-header bg-white mb-2">
+        <ul class="nav nav-tabs cursor-pointer" id="myTab" role="tablist">
+            <ng-container #tabheader>
+
+            </ng-container>
+        </ul>
+    </div>
+    <div class="card-body bg-white">
+        <div class="tab-content px-3" id="myProfileContainer">
+            <ng-container #tabcontent>
+
+            </ng-container>
+        </div>
+    </div>
+</div>
+
+<ng-template let-data #tabitem>
+    <li class="nav-item">
+        <a class="nav-link active" [class.active]="data.Selected"
+           (click)="OnSelectTab(data.Index)" role="tab" aria-selected="true">{{data.Name}}</a>
+    </li>
+</ng-template>

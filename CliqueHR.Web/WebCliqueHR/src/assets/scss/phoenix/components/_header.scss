@@ -1,0 +1,117 @@
+.notification-count{
+    position: absolute;
+    color: var(--white);
+    font-size: 11px;
+    border-radius: 50%;
+    max-width: 30px;
+    overflow: hidden;
+    height: 22px;
+    width: 22px;
+    line-height: 22px;
+    text-align: center;
+    font-style: normal;
+    &.top-position{
+        top: 5px;
+        right: -10px;
+        background: var(--danger);
+    }
+    &.bottom-position{
+        bottom: -5px;
+        right: -5px;
+        background: var(--primary);
+    }
+}
+
+.msg-unread {
+    position: absolute;
+    top: 0;
+    right: 5px;
+    min-height: 10px;
+    display: inline-block;
+    min-width: 10px;
+    box-shadow: 0 0 0 rgba(67, 74, 84, 0.9);
+    animation: pulse 2s infinite;
+    z-index: 9;
+    border-radius: 50%;
+    padding: .2rem .25rem;
+    background: var(--danger);
+}
+
+.header-section{
+    background: var(--white);
+}
+
+.navbar{
+    padding: 1rem;
+    height: 80px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    a{
+        color: var(--theme-color);
+    }
+    .navbar-nav .nav-link {
+        padding-right: 1rem;
+    }
+    i.icon{
+        font-size: 20px;
+        color: var(--theme-icon-color);
+    }
+}
+.comp-logo{
+    height: 45px;
+}
+.header-search{
+    input[type=search]{
+        position: absolute;
+        border: 0;
+        padding: 10px 10px 10px 0;
+        width: 70px;
+        border-radius: 0;
+        -webkit-transition: all .5s;
+        transition: all .5s;
+        background: transparent;
+        color: var(--theme-color);
+        &:focus{
+            border: 0;
+            width: 130px;
+            outline: none;
+            border-bottom: 1px solid var(--theme-color);
+        }
+    }
+    @include placeholder{
+        color: var(--theme-color);
+    }
+}
+.notification-section{
+    position: relative;
+    li{
+        position: relative;
+        margin: 0 0 1rem;
+        padding: 0 0 1rem;
+        border-bottom: 1px solid $theme-border;
+        opacity: 0.6;
+        &:last-child{
+            margin: 0;
+            border: 0;
+        }
+        &.unread{
+            opacity: 1;
+        }
+        .notification-time{
+            position: absolute;
+            bottom: 5px;
+            right: 0;
+            font-weight: bold;
+        }
+    }
+}
+
+.navbar-brand{
+    padding: 0 0 0 70px;
+}
+ 
+.bx-tada {
+    -webkit-animation: tada 1.5s ease infinite;
+    animation: tada 1.5s ease infinite;
+}
+
+

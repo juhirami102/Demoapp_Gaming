@@ -1,0 +1,156 @@
+.form-control{
+    background-color: transparent;
+    color: var(--theme-color);
+    &.label-mode{
+        border: 0;
+        padding-left: 0;
+        padding: 0;
+        height: auto;
+    }
+    &.bottom-only {
+        border: none;
+        border-bottom: 1px solid $theme-border;
+        @include border-radius(0);
+        padding-left: 0;
+        background: transparent;
+        &:focus{
+            background-color: transparent;
+            @include box-shadow(0 1px 0 0 rgba(255, 255, 255, 0.8) !important);
+        }
+    }
+    &:focus {
+        box-shadow: 0 0 0 .2rem rgba(mix($custom,$custom,60%),0.5);
+        border-color: transparent;
+    }
+    &:disabled,
+    &[readonly]{
+        color: #aaa;
+        cursor: not-allowed;
+    }
+}
+
+
+.multiselect-container{
+    max-height: 200px;
+    overflow-y: auto;
+    >li>a>label {
+        padding: 5px 15px;
+    }
+}
+.bootstrap-datetimepicker-widget.dropdown-menu {
+    padding: 10px;
+    table {
+        th,
+        td.day{
+           line-height: 30px;
+        }
+        td,
+        .month,
+        .year,
+        .decade{
+            &.active{
+                background-color: var(--primary);
+                color: $white;
+            }
+        }
+    }
+    .timepicker-picker{
+        table td {
+            height: 20px;
+            line-height: 30px;
+            width: 20px;
+            a{
+                padding: 0;
+            }
+            span {
+                width: 20px;
+                height: 20px;
+                line-height: 30px;
+            }
+            &:not(.separator){
+                &:hover{
+                    background: #eeeeee;
+    
+                }
+            }
+            
+        }
+    }
+}
+
+.custom-control {
+    &.custom-switch{
+        .custom-control-input:checked~.custom-control-label::after {
+            background-color: #fff;
+            -webkit-transform: translateX(.75rem);
+            transform: translateX(1.75rem);
+        }
+        .custom-control-label::after {
+            top: calc(.25rem + 3px);
+            left: calc(-3.25rem + 2px);
+            width: calc(1rem - 4px);
+            height: calc(1rem - 4px);
+        }
+        .custom-control-label::before {
+            left: -3.50rem;
+            width: 3.00rem;
+            pointer-events: all;
+            border-radius: 1rem;
+            height: 1.2rem;
+        }
+    }
+}
+.custom-control-input:checked~.custom-control-label::before {
+    color: var(--custom);
+    border-color: var(--custom);
+    background-color: var(--custom);
+}
+.custom-control-input:focus{
+    &:not(:checked)~.custom-control-label::before {
+        border-color: var(--custom);
+    }
+    &~.custom-control-label::before {
+        box-shadow: 0 0 0 0.2rem rgba(102, 110, 232, 0.30);
+    }
+}
+.custom-checkbox,
+.custom-radio{
+    .custom-control-label::after {
+        position: absolute;
+        top: 0;
+        left: -1.25rem;
+        display: block;
+        width: 1.25rem;
+        height: 1.25rem;
+        content: "";
+    }
+}
+.custom-checkbox{
+    .custom-control-label::before {
+        border-radius: 100%;
+    }
+}
+
+.custom-checkbox,
+.custom-radio{
+    .custom-control-label::before {
+        position: absolute;
+        top: 0;
+        left: -1.25rem;
+        display: block;
+        width: 1.25rem;
+        height: 1.25rem;
+        pointer-events: none;
+        content: "";
+        background-color: #fff;
+        border: 1px solid #222;
+    }
+    .custom-control-input:disabled~.custom-control-label::before, 
+    .custom-control-input[disabled]~.custom-control-label::before {
+        background-color: #e9ecef;
+    }
+    .custom-control-input[disabled]:checked~.custom-control-label::before,
+    .custom-control-input:disabled:checked~.custom-control-label::before {
+        background-color: rgba(0,123,255,.5);
+    }
+}

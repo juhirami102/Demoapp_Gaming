@@ -1,0 +1,6 @@
+<select class="form-control" *ngIf="isDisplay" [formControl]="formControl">
+    <ng-container *ngTemplateOutlet="optionsContent">
+    </ng-container>
+</select>
+<ng-container *ngTemplateOutlet="validationContent;context:{$implicit:validationMessage}">
+</ng-container>

@@ -1,0 +1,4 @@
+<input *ngIf="isDisplay" [appNumeric]="isNumeric" [appDecimal]="isDecimal" 
+[formControl]="formControl" class="form-control" type="{{Type}}" placeholder="{{PlaceHolder}}" />
+<ng-container *ngTemplateOutlet="validationContent;context:{$implicit:validationMessage}">
+</ng-container>

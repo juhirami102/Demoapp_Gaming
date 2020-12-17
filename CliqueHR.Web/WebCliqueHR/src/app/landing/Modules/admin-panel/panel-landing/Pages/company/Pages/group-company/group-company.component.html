@@ -1,0 +1,183 @@
+<div class="tab-pane fade show active" role="tabpanel">
+    <div class="form-row align-items-end mb-3 pb-3 border-bottom">
+        <div class="col-11">
+            <h4 class="mb-0">Company Details</h4>
+        </div>
+        <div class="col-1 text-right">
+            <div class="btn-more ml-auto shadow btn-custom" data-tooltip="tooltip" data-placement="top"
+                title="Edit Details">
+                <i class="icon icon-edit h3 mb-0"></i>
+            </div>
+        </div>
+    </div>
+    <div class="form-row form-fields">
+        <div class="col-md-3 mb-3">
+            <label class="h6 mb-1">
+                Group Company Name
+            </label>
+            <lib-text-box [FormInput]="companyName" [Configuration]="{PlaceHolder:'Enter Company Name'}"></lib-text-box>
+            <!-- <input class="form-control" type="text" value="" placeholder="Enter Company Name"> -->
+        </div>
+        <div class="col-md-3 mb-3">
+            <label class="h6 mb-1">
+                Group Company Code
+            </label>
+            <input class="form-control" type="text" value="" placeholder="Enter Company Code">
+        </div>
+        <div class="col-md-3 mb-3">
+            <label class="h6 mb-1">
+                Company Type
+            </label>
+            <select class="form-control">
+                <option value="AL" selected="">Private</option>
+                <option value="WY">PSU</option>
+                <option value="WY">Government</option>
+            </select>
+        </div>
+        <div class="col-md-3 mb-3">
+            <label class="h6 mb-1">
+                Incorporation Date
+            </label>
+            <!-- <input class="form-control custom_date_picker" size="16" type="text" value="02 Oct 2020"> -->
+            <lib-ui-datepicker [Configuration]="{max: '05-08-2020'}" [FormInput]="date">
+            </lib-ui-datepicker>
+        </div>
+    </div>
+    <div class="form-row form-fields">
+        <div class="col-md-6">
+            <label class="h6 mb-1">
+                Address
+            </label>
+            <!-- <textarea class="form-control" rows="4" type="text" value="" placeholder="Enter Address"></textarea> -->
+            <lib-text-area [FormInput]="companyName" [Configuration]="{PlaceHolder:'Enter Address', Rows:4 }">
+            </lib-text-area>
+        </div>
+        <div class="col-md-6">
+            <div class="form-row form-fields">
+                <div class="col-md-6 mb-2">
+                    <label class="h6 mb-1">
+                        Country
+                    </label>
+                    <lib-drop-down [FormInput]="countryControl" [Configuration]='{}'>
+                        <ng-template #options>
+                            <option *ngFor="let country of Countries" [value]="country.Value">{{country.Text}}</option>
+                        </ng-template>
+                    </lib-drop-down>
+                </div>
+                <div class="col-md-6 mb-2">
+                    <label class="h6 mb-1">
+                        State
+                    </label>
+                    <!-- <select class="form-control">
+                        <option value="AL">Maharastra</option>
+                        <option value="WY">Gujrat</option>
+                        <option value="WY">Rajasthan</option>
+                        <option value="WY">Madhya Pradesh</option>
+                        <option value="WY">Uttar Pradesh</option>
+                    </select> -->
+                    <lib-ui-multi-select [SelectedItem]="SelectedValue" [SearchInput]="SearchInput" [Configuration]="{Placeholder:'Select State', isEditable:true}">
+                        <ng-template>
+                            <li *ngFor="let st of States;let i=index;" class="pure-checkbox">
+                                <input (change)="OnItemSelect(i, $event.target.checked)" aria-labelledby="option" type="checkbox" [checked]="st.Selected"><label>{{st.Text}}</label>
+                            </li>
+                        </ng-template>
+                    </lib-ui-multi-select>
+                </div>
+                <div class="col-md-6 mb-2">
+                    <label class="h6 mb-1">
+                        City
+                    </label>
+                    <select class="form-control">
+                        <option value="AL">Mumbai</option>
+                        <option value="WY">Delhi</option>
+                        <option value="WY">Ahmedabad</option>
+                        <option value="WY">Hydrabad</option>
+                        <option value="WY">Pune</option>
+                        <option value="WY">Chennai</option>
+                    </select>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label class="h6 mb-1">
+                        Pin Code
+                    </label>
+                    <input class="form-control" type="text" value="397891">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="form-row form-fields">
+        <div class="col-md-3 mb-3">
+            <label class="h6 mb-1">
+                Contact No.
+            </label>
+            <input class="form-control" type="text" value="" placeholder="Enter Contact number...">
+        </div>
+        <div class="col-md-3 mb-3">
+            <label class="h6 mb-1">
+                Website
+            </label>
+            <input class="form-control" type="text" value="" placeholder="Enter Website...">
+        </div>
+    </div>
+    <div class="form-row form-fields">
+        <div class="col-md-2 mb-3">
+            <label class="h6 mb-1">
+                PAN
+            </label>
+            <input class="form-control" type="text" value="" placeholder="Enter PAN">
+        </div>
+        <div class="col-md-2 mb-3">
+            <label class="h6 mb-1">
+                TAN
+            </label>
+            <input class="form-control" type="text" value="" placeholder="Enter TAN">
+        </div>
+        <div class="col-md-2 mb-3">
+            <label class="h6 mb-1">
+                GSTIN
+            </label>
+            <input class="form-control" type="text" value="" placeholder="Enter GSTIN">
+        </div>
+        <div class="col-md-3 mb-3">
+            <label class="h6 mb-1">
+                PF
+            </label>
+            <input class="form-control" type="text" value="" placeholder="Enter PF">
+        </div>
+        <div class="col-md-3 mb-3">
+            <label class="h6 mb-1">
+                ESIC
+            </label>
+            <input class="form-control" type="text" value="" placeholder="Enter ESIC">
+        </div>
+    </div>
+    <div class="form-row form-fields">
+        <div class="col-md-6 mb-3">
+            <label class="h6 mb-1">
+                Add Proof
+            </label>
+            <div class="form-row align-items-center">
+                <div class="col-3">
+                    <div class="custom-file custom-file-btn btn btn-custom">
+                        <input type="file" class="custom-file-input">
+                        <span class="mb-0" for="customFile">Add Logo</span>
+                    </div>
+                </div>
+                <div class="col-9">
+                    <div class="h5 d-block file-name text-break mb-2"></div>
+                </div>
+                <div class="col-12 mt-2">
+                    <div class="text-small d-block text-danger text-break mb-0">
+                        Note: Only JPG, PNG and GIF files are allowed.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="form-row align-items-end mt-3 pt-3 border-top">
+        <div class="col-12 text-right">
+            <button class="btn btn-outline-custom py-2 px-4 mr-2">cancel</button>
+            <button class="btn btn-custom py-2 px-4">Save</button>
+        </div>
+    </div>
+</div>

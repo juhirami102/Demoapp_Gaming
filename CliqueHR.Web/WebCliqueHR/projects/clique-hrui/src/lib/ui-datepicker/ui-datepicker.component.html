@@ -1,0 +1,11 @@
+<input type="text" class="form-control"
+           #dateDp="dpDayPicker"
+           [dpDayPicker]="options"
+           [theme]="'dp-material'"
+           [formControl]="formControl"
+           [mode]="'day'"
+           [disabled]="isDisabled"
+           [placeholder]="Plcaeholder"
+           (onChange)="OnDateSelect($event)" />
+<ng-container *ngTemplateOutlet="validationContent;context:{$implicit:dpValidationMessages}">
+</ng-container>

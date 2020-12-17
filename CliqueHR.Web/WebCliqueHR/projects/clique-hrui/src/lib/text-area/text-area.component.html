@@ -1,0 +1,4 @@
+<textarea *ngIf="isDisplay" class="form-control" rows="{{Rows}}" type="text" placeholder="{{PlaceHolder}}"
+[formControl]="formControl" ></textarea>
+<ng-container *ngTemplateOutlet="validationContent;context:{$implicit:validationMessage}">
+</ng-container>

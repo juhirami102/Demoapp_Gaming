@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30503.244
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CliqueHR.BL", "CliqueHR.BL\CliqueHR.BL.csproj", "{8F1BD13A-194A-4FC7-8D88-9D54E52E0F52}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CliqueHR.DL", "CliqueHR.DL\CliqueHR.DL.csproj", "{6FA4186A-6CE0-4D43-9DE4-A575C252104B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CliqueHR.Helpers", "CliqueHR.Helpers\CliqueHR.Helpers.csproj", "{D44F6B65-B985-4288-BBF6-60EB5143862B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CliqueHR.Common", "CliqueHR.Common\CliqueHR.Common.csproj", "{6724215F-12BE-4F9E-BBAA-5E5DD183AA2D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CliqueHR.Web", "CliqueHR.Web\CliqueHR.Web.csproj", "{0C365CE8-151A-443C-BDC0-96012BAEC6FB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CliqueHR.Api", "CliqueHR.Api\CliqueHR.Api.csproj", "{000AFDD5-B322-4879-ACB7-95B182902C40}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8F1BD13A-194A-4FC7-8D88-9D54E52E0F52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F1BD13A-194A-4FC7-8D88-9D54E52E0F52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F1BD13A-194A-4FC7-8D88-9D54E52E0F52}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F1BD13A-194A-4FC7-8D88-9D54E52E0F52}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6FA4186A-6CE0-4D43-9DE4-A575C252104B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FA4186A-6CE0-4D43-9DE4-A575C252104B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FA4186A-6CE0-4D43-9DE4-A575C252104B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FA4186A-6CE0-4D43-9DE4-A575C252104B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D44F6B65-B985-4288-BBF6-60EB5143862B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D44F6B65-B985-4288-BBF6-60EB5143862B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D44F6B65-B985-4288-BBF6-60EB5143862B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D44F6B65-B985-4288-BBF6-60EB5143862B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6724215F-12BE-4F9E-BBAA-5E5DD183AA2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6724215F-12BE-4F9E-BBAA-5E5DD183AA2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6724215F-12BE-4F9E-BBAA-5E5DD183AA2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6724215F-12BE-4F9E-BBAA-5E5DD183AA2D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C365CE8-151A-443C-BDC0-96012BAEC6FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C365CE8-151A-443C-BDC0-96012BAEC6FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C365CE8-151A-443C-BDC0-96012BAEC6FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C365CE8-151A-443C-BDC0-96012BAEC6FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{000AFDD5-B322-4879-ACB7-95B182902C40}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{000AFDD5-B322-4879-ACB7-95B182902C40}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{000AFDD5-B322-4879-ACB7-95B182902C40}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{000AFDD5-B322-4879-ACB7-95B182902C40}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {76C30097-AC47-46D7-B5E3-D0CC8381203D}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,26 @@
+.nav-tabs{
+    border-bottom: none;
+    .nav-link{
+        border: none;
+        border-radius: 0;
+        color: var(--black);
+        position: relative;
+        font-size: 13px;
+        padding: 0.5rem 0.75rem;
+        &.active{
+            //border-bottom: 3px solid var(--primary);
+            background-color: transparent; 
+            font-weight: 700;
+            //@include transition(all 0.2s);
+            &:before{
+                @include pseudo;
+                bottom: 0;
+                left: 50%;
+                width: 1.5rem;
+                height: 2px;
+                margin-left: -0.75rem;
+                background: var(--primary);
+            }
+        }
+    }
+}

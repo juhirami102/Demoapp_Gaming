@@ -1,0 +1,227 @@
+.btn{
+    padding: .6rem .75rem;
+    border-radius: 5px;
+    position: relative;
+    &.btn-sm{
+        padding: .3rem .5rem;
+    }
+    .ripple {
+        width: 0;
+        height: 0;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.4);
+        transform: scale(0);
+        position: absolute;
+        opacity: 1;
+        &.rippleEffect {
+            animation: rippleDrop .6s linear;
+        }
+    }
+}
+.btn-icon{
+    display: inline-block;
+    cursor: pointer;
+    @include border-radius(50%);
+    height: 42px;
+    line-height: 42px;
+    width: 42px;
+    text-align: center;
+    &:hover{
+        background: var(--custom);
+        i.icon{
+            color: $white;
+            -webkit-animation: jello-horizontal 0.9s both;
+            animation: jello-horizontal 0.9s both;
+        }
+    }
+}
+.btn-more{
+    cursor: pointer;
+    @include border-radius(50%);
+    height: 35px;
+    line-height: 35px;
+    width: 35px;
+    text-align: center;
+    background: var(--white);
+    display: inline-block;
+    &:hover{
+        background: var(--custom);
+        i.icon{
+            color: $white;
+            -webkit-animation: jello-horizontal 0.9s both;
+            animation: jello-horizontal 0.9s both;
+        }
+    }
+}
+@each $color, $value in $theme-colors {
+    .btn-#{$color} {
+        // @include button-variant($value, $value);
+        background-color: var(--#{$color});
+        border-color: var(--#{$color});
+        color: $white;
+        i.icon{
+            color: $white;
+            font-size: 16px;
+        }
+        &.disabled,
+        &:disabled {
+            cursor: not-allowed;
+        }
+        &:focus,
+        &.focus {
+            box-shadow: 0 0 0 .2rem rgba(mix($value,$value,60%),0.5);
+        }
+        &:hover,
+        &:active{
+            background-color: darken($value, 7.5%) linear-gradient(180deg, rgba(mix($value,$value,15%),1), darken($value, 7.5%)) repeat-x;
+            border-color: transparent;
+        }
+    }
+
+    .btn-outline-#{$color} {
+        //@include button-outline-variant($value);
+        color: var(--#{$color});
+        border-color: var(--#{$color});
+        i.icon{
+            color: var(--#{$color});
+            font-size: 16px;
+        }
+        &:hover{                
+            @if ($color == "white") {
+                color: $white;
+            }@else{
+                background-color: var(--#{$color});
+                color: $white;
+            }
+            i.icon{
+                color: $white;
+            }
+        }       
+        &.disabled,
+        &:disabled {
+            color: var(--#{$color});
+            background-color: transparent;
+            cursor: not-allowed;
+        }
+        &:not(:disabled):not(.disabled):active,
+        &:not(:disabled):not(.disabled).active,
+        .show > &.dropdown-toggle {
+            @if ($color == "white") {
+                color: $white;
+            }@else{
+                background-color: var(--#{$color});
+                color: $white;
+            }
+        }
+        &:focus,
+        &.focus {
+            box-shadow: 0 0 0 .2rem rgba(mix($value,$value,60%),0.5);
+        }
+    }
+}
+
+@each $color, $value in $other-colors {
+    .btn-#{$color} {
+        // @include button-variant($value, $value);
+        background-color: var(--#{$color});
+        border-color: var(--#{$color});
+        color: $white;
+        i.icon{
+            color: $white;
+            font-size: 16px;
+        }
+        &.disabled,
+        &:disabled {
+            cursor: not-allowed;
+        }
+        &:focus,
+        &.focus {
+            box-shadow: 0 0 0 .2rem rgba(mix($value,$value,60%),0.5);
+        }
+        &:hover,
+        &:active{
+            background-color: darken($value, 7.5%) linear-gradient(180deg, rgba(mix($value,$value,15%),1), darken($value, 7.5%)) repeat-x;
+            border-color: transparent;
+        }
+    }
+
+    .btn-outline-#{$color} {
+        //@include button-outline-variant($value);
+        color: var(--#{$color});
+        border-color: var(--#{$color});
+        i.icon{
+            color: var(--#{$color});
+            font-size: 16px;
+        }
+        &:hover{                
+            @if ($color == "white") {
+                color: $white;
+            }@else{
+                background-color: var(--#{$color});
+                color: $white;
+            }
+            i.icon{
+                color: $white;
+            }
+        }       
+        &.disabled,
+        &:disabled {
+            color: var(--#{$color});
+            background-color: transparent;
+            cursor: not-allowed;
+        }
+        &:not(:disabled):not(.disabled):active,
+        &:not(:disabled):not(.disabled).active,
+        .show > &.dropdown-toggle {
+            @if ($color == "white") {
+                color: $white;
+            }@else{
+                background-color: var(--#{$color});
+                color: $white;
+            }
+        }
+        &:focus,
+        &.focus {
+            box-shadow: 0 0 0 .2rem rgba(mix($value,$value,60%),0.5);
+        }
+    }
+}
+
+.close{
+    text-shadow: none;
+    opacity: 1;
+    &:not(:disabled):not(.disabled):focus, 
+    &:not(:disabled):not(.disabled):hover {
+        opacity: 1;
+    }
+    &:focus {
+        outline: 1px dotted;
+        outline: none;
+    }
+}
+
+.custom-file-btn{
+    height: auto;
+    width: auto;
+    input.custom-file-input{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        opacity: 0;
+        margin: 0;
+        padding: 0;
+        bottom: 0;
+        right: 0;
+    }
+}
+
+.dropdown-menu{
+    background-color: var(--white);
+    @include border-radius(0);
+}
+&.border-rounded{
+    .dropdown-menu{
+        @include border-radius(0.5rem);
+    }
+}

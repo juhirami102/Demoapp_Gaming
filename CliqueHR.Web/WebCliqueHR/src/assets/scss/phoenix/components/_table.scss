@@ -1,0 +1,114 @@
+.table{
+    color: inherit;
+    td,th{
+        font-size: 13px;
+        vertical-align: middle;
+    }  
+    &.no-border{
+        td{
+            border: 0;
+        }
+    }
+    &.table-striped{
+        td, th {
+            padding: 15px;
+            border: 0;
+        }
+    }
+}
+.page-item{
+    .page-link {
+        color: var(--primary);
+    }
+    &.active{
+        .page-link {
+            background-color: var(--primary);
+            border-color: var(--primary);
+            color: $white;
+        }
+    }
+}
+
+.dataTables_wrapper{
+    // .custom-data-table{
+    //     td,th{
+    //         white-space: nowrap;
+    //     }
+    // }
+    .dataTables_filter{
+        text-align: right;
+    }
+    .bottom{
+        border-top: 1px solid $theme-border;
+        padding: 10px 0;
+    }
+    .dataTables_info{
+        display: inline-block;
+        font-size: 12px;
+        margin: 0 15px 0 0;
+    }
+    .dataTables_length{
+        display: inline-block;
+        width: 20%;
+        font-size: 12px;
+        label{
+            margin: 0;
+            select{
+                padding: 3px 5px;
+                margin: 0 2px;
+            }
+        }
+    }
+    .dataTables_paginate {
+        float: right;
+        .paginate_button{
+            background: $white;
+            padding: 6px 10px;
+            border: 1px solid $theme-border;
+            cursor: pointer;
+            &.previous{                    
+                border-right: 0;
+            }
+            &.next{                
+                border-left: 0;
+            }
+            &:hover,
+            &.current{
+                text-decoration: none;
+                background: var(--primary);
+                color: $white;
+            }
+            &.disabled {
+                opacity: 0.5;
+                cursor: not-allowed;
+                pointer-events: none;
+            }
+        }
+        span a.paginate_button{
+            border-right: 0;
+            &:last-child{
+                border-right: 1px solid $theme-border;
+            }
+        }
+    }
+    .dataTables_scroll{
+        margin-bottom: 1rem;
+    }
+}
+
+.access-sticky-header {
+    overflow-y: auto; 
+    height: calc(100vh - 175px);
+    thead th {
+        position: sticky;
+        top: 0px;
+        background: #fff;
+        z-index: 99;
+        box-shadow: 0 -2px 5px #ddd;
+        border-top: 1px solid #dee2e6;
+        &.second-th{
+            top: 34px;
+            border-top: 1px solid #dee2e6;;
+        }
+    }
+}
